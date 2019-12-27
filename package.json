@@ -1,0 +1,27 @@
+{
+  "name": "trees-music",
+  "version": "1.0.0",
+  "description": "How does a tree sounds like?",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.10",
+    "webpack": "^4.41.4"
+  },
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niczyja/trees-music.git"
+  },
+  "keywords": [],
+  "author": "Maciej Sienkiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niczyja/trees-music/issues"
+  },
+  "homepage": "https://github.com/niczyja/trees-music#readme"
+}
