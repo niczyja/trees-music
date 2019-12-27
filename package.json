@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "How does a tree sounds like?",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "jsonq": "^1.2.0"
+  },
   "devDependencies": {
     "webpack-cli": "^3.3.10",
     "webpack": "^4.41.4"
