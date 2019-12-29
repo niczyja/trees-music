@@ -4,7 +4,6 @@ const maxPageSize = 32000;
 
 let offset = 0;
 let data = {
-    definition: [],
     trees: [],
     total: 0
 };
@@ -28,9 +27,20 @@ export const getData = (response) => {
     requestWithUrl(url, function () {
         offset += maxPageSize;
 
-        data.definition = this.response.result.fields;
         data.total = this.response.result.total;
-        data.trees = data.trees.concat(this.response.result.records);
+        data.trees = data.trees.concat(this.response.result.records.map(function(record) {
+            return {
+                id: record.numer_inw,
+                lat: record.y_wgs84,
+                lng: record.x_wgs84,
+                addr: record.adres + ', ' + record.dzielnica,
+                spc: record.gatunek + ' (' + record.gatunek_1 + ')',
+                hght: record.wysokosc,
+                circ: record.pnie_obwod,
+                diam: record.srednica_k,
+                hlth: record.stan_zdrowia
+            };
+        }));
 
         getData(response);
     });
