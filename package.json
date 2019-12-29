@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "How does a tree sounds like?",
   "main": "index.js",
-  "dependencies": {
-    "jsonq": "^1.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "dotenv-webpack": "^1.7.0",
     "webpack": "^4.41.4",
