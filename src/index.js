@@ -12,6 +12,7 @@ var loader = setInterval(function() { dataDiv.textContent += "." }, 1000);
 //     console.log(data);
 // });
 
+
 var trees = [
   {
     "_id": 10001,
@@ -163,3 +164,10 @@ function initMap() {
     });
 }
 window.initMap = initMap;
+
+var body = document.getElementsByTagName('body')[0];
+var gmaps = document.createElement('script');
+gmaps.async = true;
+gmaps.defer = true;
+gmaps.src = 'https://maps.googleapis.com/maps/api/js?key=' + process.env.GOOGLE_MAPS_API_KEY + '&callback=initMap';
+body.appendChild(gmaps);

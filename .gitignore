@@ -4,6 +4,7 @@ dist/*
 !dist/index.html
 node_modules/
 *.log
+.env
 .je-project-settings
 .flowconfig
 trees-music.sublime-project
